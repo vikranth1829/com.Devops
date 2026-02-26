@@ -1,0 +1,5 @@
+com\CRM\TestCases\HomePageTestCases.class
+com\CRM\pages\LoginPage.class
+com\CRM\TestCases\LoginPageTestCases.class
+com\CRM\pages\HomePage.class
+com\CRM\TestCases\BaseClass.class
