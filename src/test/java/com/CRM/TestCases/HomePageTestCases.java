@@ -1,5 +1,7 @@
 package com.CRM.TestCases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
@@ -10,7 +12,7 @@ public class HomePageTestCases extends BaseClass {
 	
 	
 	@Test(priority=1)
-	public void verifyUrl() {
+	public void verifyUrl() throws IOException {
 		HomePage hp=new HomePage(driver);
 		String acturl=hp.geturl();
 		Assert.assertTrue(acturl.contains("crm"),"Url is mismathed !");		
@@ -18,7 +20,7 @@ public class HomePageTestCases extends BaseClass {
 	}
 	
 	@Test(priority=2)
-	public void verifyTitle() {
+	public void verifyTitle() throws IOException {
 		HomePage hp=new HomePage(driver);
 		String pagetitle=hp.getTitle();
 		System.out.println(pagetitle+"---->");
@@ -27,7 +29,7 @@ public class HomePageTestCases extends BaseClass {
 	}
 	
 	@Test(priority=3)
-	public void validateSignin() {
+	public void validateSignin() throws IOException {
 		HomePage hp=new HomePage(driver);
 		String acturl = hp.clickSignInButton();
 		Assert.assertTrue(acturl.contains("login"),"Login page is not opened !");

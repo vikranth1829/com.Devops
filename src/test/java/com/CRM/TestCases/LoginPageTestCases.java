@@ -1,5 +1,7 @@
 package com.CRM.TestCases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,7 +18,7 @@ public class LoginPageTestCases extends BaseClass{
 	}
 	
 	@Test(priority=1)
-	public void verifySuccessfulLogin() {
+	public void verifySuccessfulLogin() throws IOException {
 		//HomePage hp= new HomePage(driver);
 		//hp.clickSignIn();
 		LoginPage lp = new LoginPage(driver);

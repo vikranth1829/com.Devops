@@ -1,7 +1,11 @@
 package com.CRM.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import com.CRM.Utility.ScreenshotUtility;
 
 public class LoginPage {
 	private WebDriver driver;
@@ -15,13 +19,15 @@ public class LoginPage {
 	private By submitButton = By.name("submit-name");
 	private By signOutButton = By.cssSelector("a[href=\"sign-out.html\"]");
 	
-	public void Login(String email,String pswd) {
+	public void Login(String email,String pswd) throws IOException {
 		driver.findElement(emailTextbox).sendKeys(email);
+		ScreenshotUtility.getScreenshot(driver);
 		driver.findElement(passwordTextbox).sendKeys(pswd);
 		driver.findElement(submitButton).click();
 	}
 	
-	public Boolean verifyLogginIn() {
+	public Boolean verifyLogginIn() throws IOException {
+		ScreenshotUtility.getScreenshot(driver);
 		return driver.findElement(signOutButton).isDisplayed();
 	}
 }
