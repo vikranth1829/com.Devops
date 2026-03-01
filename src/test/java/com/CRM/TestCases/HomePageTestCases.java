@@ -13,7 +13,7 @@ public class HomePageTestCases extends BaseClass {
 	
 	@Test(priority=1)
 	public void verifyUrl() throws IOException {
-		HomePage hp=new HomePage(driver);
+		HomePage hp=new HomePage(driver); //creating object
 		String acturl=hp.geturl();
 		Assert.assertTrue(acturl.contains("crm"),"Url is mismathed !");		
 		System.out.println("TestCase_01 passed ");
