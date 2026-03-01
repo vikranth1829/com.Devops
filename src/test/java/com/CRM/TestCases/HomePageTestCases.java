@@ -21,7 +21,7 @@ public class HomePageTestCases extends BaseClass {
 	
 	@Test(priority=2)
 	public void verifyTitle() throws IOException {
-		HomePage hp=new HomePage(driver);
+		HomePage hp=new HomePage(driver); //create the object
 		String pagetitle=hp.getTitle();
 		System.out.println(pagetitle+"---->");
 		Assert.assertTrue(pagetitle.contains("Customer"), "Page Title is Mismatched !");
